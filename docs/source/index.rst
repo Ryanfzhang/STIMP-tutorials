@@ -13,9 +13,11 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
-   usage
-   api
+   installation.rst
+   usage.rst
+   analysis/index.rst
 
 Reference
 =========
