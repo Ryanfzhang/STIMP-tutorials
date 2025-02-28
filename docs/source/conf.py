@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'STIMP'
+copyright = "2025, Fan Zhang"
+author = 'Fan Zhang'
 
 release = '0.1'
 version = '0.1.0'
@@ -24,7 +24,6 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 intersphinx_disabled_domains = ['std']
-master_doc = 'index'
 
 templates_path = ['_templates']
 
@@ -34,3 +33,5 @@ html_theme = 'piccolo_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+bibtex_bibfiles = ["refs.bib"]
+bibtex_bibliography_header = ".. rubric:: References"
