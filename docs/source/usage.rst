@@ -66,3 +66,6 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
 
 Prediction
 ------------
+
+.. bibliography::
+    :filter: {"usage"} & docnames
