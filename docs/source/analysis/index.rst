@@ -1,5 +1,5 @@
 ==================
-Remote sensing Chl_a data analysis
+Four representative coastal ocean area analysis
 ==================
 
 Code for reproducing the results presented in our paper

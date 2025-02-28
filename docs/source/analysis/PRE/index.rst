@@ -1,14 +1,19 @@
 ================================================================
-3D *Drosophila* embryo model constructed from Stereo-seq dataset
+Pearl River Estuary
 ================================================================
 
-The *Drosophila* embryo dataset profiled by Stereo-seq :cite:p:`wang2022high` is available at
-the Flysta3D database (https://db.cngb.org/stomics/flysta3d/).
-The *Drosophila* embryo sci-RNA-seq3 dataset :cite:p:`calderon2022continuum` is available at
-the GEO DataSets database with accession number `GSE190149 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190149>`_.
+There are several major cities in the Pearl River Estuary, 
+including Shenzhen, Guangzhou, and Zhuhai, where rapid industrialization and urbanization have adversely impacted water quality in downstream of the Pearl River system  :cite:`jayawardena1989time`. 
+Eutrophication has produced serious red tide events or harmful algal blooms in the estuary and its adjacent coastal waters since the 1980s, causing economic losses :cite:`chen2007remotely`
 
 .. toctree::
    :maxdepth: 3
    
-   Drosophila_embryo_STitch3D
-   Drosophila_embryo_MCube
+   02-imputation-pearl-river-estuary
+   03-prediction-pearl-river-estuary
+   04-prediction-pearl-river-estuary-case-study
+
+Reference
+--------
+
+.. bibliography::

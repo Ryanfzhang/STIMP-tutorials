@@ -42,5 +42,5 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
-bibtex_bibfiles = ["refs.bib"]
+bibtex_bibfiles = ["reference.bib"]
 bibtex_bibliography_header = ".. rubric:: References"
