@@ -34,13 +34,34 @@ Prediction Metods
 we compared results against baseline methods in three categories: (1) machine learning method, XGBoost :cite:`chen2016xgboost`; 
 (2) time series prediction methods, including CrossFormer :cite:`zhang2023crossformer`, TSMixer :cite:`ekambaram2023tsmixer` and  iTransFormer :cite:`liu2023itransformer`; 
 (3) spatiotemporal prediction methods, including MTGNN :cite:`wu2020connecting` and PredRNN :cite:`wang2022predrnn`.
+
 .. code-block:: bash
-   python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area PRE
-   python prediction/train_without_spatial_imputation.py --method "iTransformer" --area PRE
-   python prediction/train_without_spatial_imputation.py --method "TSMixer" --area PRE
-   python prediction/train_without_imputation.py --method "MTGNN" --area PRE
-   python prediction/train_as_image_without_imputation.py --method "PredRNN" --area PRE
-   python prediction/train_xgboost_without_imputation.py --area PRE
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area PRE
+      python prediction/train_without_spatial_imputation.py --method "iTransformer" --area PRE
+      python prediction/train_without_spatial_imputation.py --method "TSMixer" --area PRE
+      python prediction/train_without_imputation.py --method "MTGNN" --area PRE
+      python prediction/train_as_image_without_imputation.py --method "PredRNN" --area PRE
+      python prediction/train_xgboost_without_imputation.py --area PRE
+   done
+
+
+We also investigated if the imputation of STIMP can enhance the performance of other prediction methods in Supplementary materials. Following Rubin's rules :cite:p:`rubin2004multiple`, we trained baselines based on each imputation
+
+.. code-block:: bash
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      for i in {0..9}  
+      do  
+         python prediction/train_without_spatial.py --method "CrossFormer" --area PRE --index $i
+         python prediction/train_without_spatial.py --method "iTransformer" --area PRE --index $i
+         python prediction/train_without_spatial.py --method "TSMixer" --area PRE --index $i
+         python prediction/train.py --method "MTGNN" --area PRE --index $i
+         python prediction/train_as_image.py --method "PredRNN" --area PRE --index $i
+         python prediction/train_xgboost.py --area PRE --index $i
+      done
+   done
 
 .. bibliography::
    :filter: {"baselines"} & docnames

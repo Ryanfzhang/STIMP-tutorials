@@ -17,8 +17,8 @@ Contents
 
    installation.rst
    usage.rst
-   analysis/index.rst
    baselines.rst
+   analysis/index.rst
 
 Reference
 --------
