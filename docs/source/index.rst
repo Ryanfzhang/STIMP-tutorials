@@ -22,7 +22,7 @@ Reference
 
 If you find the ``STIMP`` package or any of the source code in this repository useful for your work, please cite:
 
-   |AI-powered spatiotemporal imputation and prediction of chlorophyll-a concentration in coastal ecosystems
+   | AI-powered spatiotemporal imputation and prediction of chlorophyll-a concentration in coastal ecosystems.
    | Fan Zhang, Hiuseut Kung, Fa Zhang, Can Yang and Jianping Gan.
    | 2025.
 
