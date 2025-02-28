@@ -43,7 +43,8 @@ does not contain ground truth for unobserved data, we can ramdomly select part o
    # A indicates how many observations are chosen as the imputation target
    # B is selected representative coastal ocean area, including PRE, MEXICO, Chesapeake and Yangtze
 
-We also provide the script for training the baselines, including CF, CSDI, DINEOF, ImputeFormter, Inpainter, Lin-itp, MaskedAE, mean and TRMF. 
+We also provide the script for training the baselines, including ``DINEOF`` :cite:p:`alvera2007multivariate,ma2021two`, ``CSDI`` :cite:p:`tashiro2021csdi`, ``ImputeFormter`` :cite:p:`nie2024imputeformer`, ``Inpainter`` :cite:p:`yun2023imputation`,
+ ``Lin-itp``, ``MaskedAE`` :cite:p:`he2022masked`, ``Slide window`` and ``TRMF`` :cite:p:`yu2016temporal`. 
 To assess the performance of STIMP, we randomly selected nine different rates of missing data, ranging from 10% to 90%, for choosing observed data as imputation targets.
 The experiments in the four coastal ocean regions, including Pearl River Estuary, Northern Gulf of Mexico, Chesapeake Bay and Yangtze River Estuary, can be conducted using the following script.
 
@@ -53,7 +54,6 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
       for i in {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9}
       do
          python imputation/train_stimp.py --missing_ratio $i --area $area
-         python imputation/train_cf.py --missing_ratio $i --area $area
          python imputation/train_csdi.py --missing_ratio $i --area $area
          python imputation/train_dineof.py --missing_ratio $i --area $area
          python imputation/train_imputeformer.py --missing_ratio $i --area $area
