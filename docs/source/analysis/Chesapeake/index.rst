@@ -6,9 +6,9 @@ Chesapeake Bay is one of the most productive estuaries in the United States.
 .. toctree::
    :maxdepth: 2
    
-   08-imputation-Chesapeake-bay.ipynb
-   09-prediction-Chesapeake-bay.ipynb
-   10-prediction-Chesapeake-bay-case-study.ipynb
+   08-imputation-chesapeake-bay.ipynb
+   09-prediction-chesapeake-bay.ipynb
+   10-prediction-chesapeake-bay-case-study.ipynb
 
 
 .. bibliography::
