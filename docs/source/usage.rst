@@ -71,11 +71,12 @@ Prediction process
 
 According to Rubin's rules :cite:p:`rubin2004multiple`, the final Chl_a prediction is obtained by averaging the outcomes of multiple imputation and prediction processes.
 
-Step.1  Generate multiple imputation for Chl_a:
+Step.1  Generate multiple imputations for Chl_a:
 ====================
 
 .. code-block:: bash
 
+   # We generate 10 imputations here
    for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
    do
       python dataset/generate_data_with_stimp.py --area $area
@@ -90,7 +91,7 @@ Step.2  Predict based on each imputation
    do
       for i in {0..9}  
       do  
-         python prediction/train.py --index $i --area PRE
+         python prediction/train.py --index $i --area $area
       done
    done
 
