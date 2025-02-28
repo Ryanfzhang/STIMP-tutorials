@@ -4,7 +4,7 @@ Usage
 
 
 Pipeline overview
-============
+--------
 
 STIMP is a deep learning-based method that accurately imputes and predicts Chl_a in the coastal oceans. The inputs for STIMP include observations of Chl_a from coastal oceans, denoted as  :math:`\mathbf{X}^{ob}`, 
 and a spatial graph, :math:`\mathbf{G}`, that contains the geographic coordinates of the observations. STIMP simultaneously outputs a complete Chl_a dataset, 
@@ -18,7 +18,7 @@ and a spatial graph, :math:`\mathbf{G}`, that contains the geographic coordinate
    :alt: Pipeline
 
 Prepare data
-============
+--------
 All data used in this work are publicly available through online sources. The chlorophyll-a observation datasets were 8-day averaged Level 3 mapped products from Moderate Resolution Imaging Spectroradiometer (MODIS) Aqua projects with a spatial resolution of 4 km 
 `MODIS <https://search.earthdata.nasa.gov/search?q=10.5067/AQUA/MODIS/L3M/CHL/2022>`_. You can select the data with **\*.8D.\*.4km.nc** as filter. 
 
@@ -33,7 +33,7 @@ We also uploaded the datasets on Zenodo at https://doi.org/10.5281/zenodo.147247
 The generated datasets are also included in the data.zip
 
 Imputation process
-============
+--------
 The imputation step intends to reconstruct multiple potential complete spatiotemporal Chl_a distributions from partial observations. Due to the collected remote sensing Chl_a data
 does not contain ground truth for unobserved data, we can ramdomly select part of observation as imputation target to train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`.
 
@@ -67,12 +67,12 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
    done
 
 Prediction process
-============
+--------
 
 According to Rubin's rules :cite:p:`rubin2004multiple`, the final Chl_a prediction is obtained by averaging the outcomes of multiple imputation and prediction processes.
 
 Step.1  Generate multiple imputations for Chl_a:
-====================
+~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -83,7 +83,7 @@ Step.1  Generate multiple imputations for Chl_a:
    done
 
 Step.2  Predict based on each imputation
-====================
+~~~~~~~~~~~~
 
 .. code-block:: bash
 

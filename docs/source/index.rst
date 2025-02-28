@@ -20,7 +20,7 @@ Contents
    analysis/index.rst
 
 Reference
-=========
+--------
 
 If you find the ``STIMP`` package or any of the source code in this repository useful for your work, please cite:
 
@@ -29,11 +29,11 @@ If you find the ``STIMP`` package or any of the source code in this repository u
    | 2025.
 
 Development
-===========
+--------
 
 The python repository ``STIMP`` is developed and maintained by `Fan Zhang <https://ryanfzhang.github.io>`_.
 
 Contact
-=======
+--------
 
 Please feel free to contact `Fan Zhang <mafzhang@ust.hk>`_, `Prof. Can Yang <macyang@ust.hk>`_, or `Prof. Jianping Gan <magan@ust.hk>`_ if any inquiries.
