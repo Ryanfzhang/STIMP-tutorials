@@ -32,16 +32,51 @@ We also uploaded the datasets on Zenodo at https://doi.org/10.5281/zenodo.147247
 `Prepare the dataset from the raw data <https://github.com/YangLabHKUST/STIMP/blob/release/tutorials/01-preprocess_chla_data.ipynb>`_ We generate the 4 datasets, including Pearl River Estuary, the Northern of Mexico, Chesapeake Bay and Yangtze River Estuary, following this tutorials. 
 The generated datasets are also included in the data.zip
 
-Imputation process
+Train STIMP
 --------
+
+Step1. train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`
+~~~~~~~~~~~~~~~~~~~~~ 
+
 The imputation step intends to reconstruct multiple potential complete spatiotemporal Chl_a distributions from partial observations. Due to the collected remote sensing Chl_a data
 does not contain ground truth for unobserved data, we can ramdomly select part of observation as imputation target to train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`.
 
 .. code-block:: bash
 
-   python imputation/train_stimp.py --missing_ratio A --area B 
-   # A indicates how many observations are chosen as the imputation target
-   # B is selected representative coastal ocean area, including PRE, MEXICO, Chesapeake and Yangtze
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      for i in {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9}
+      do
+         python imputation/train_stimp.py --missing_ratio $i --area $area
+      done
+   done
+
+
+Step.2  Generate multiple imputations for Chl_a:
+~~~~~~~~~~~~
+According to Rubin's rules :cite:p:`rubin2004multiple`, the final Chl_a prediction is obtained by averaging the outcomes of multiple imputation and prediction processes. 
+Hence, we use the following script to generate multiple imputations for Chl_a
+
+.. code-block:: bash
+
+   # We generate 10 imputations here
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      python dataset/generate_data_with_stimp.py --area $area
+   done
+
+Step.3  Predict based on each imputation
+~~~~~~~~~~~~
+
+.. code-block:: bash
+
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      for i in {0..9}  
+      do  
+         python prediction/train.py --index $i --area $area
+      done
+   done
 
 We also provide the script for training the baselines, including ``DINEOF`` :cite:`alvera2007multivariate,ma2021two`, ``CSDI`` :cite:`tashiro2021csdi`, ``ImputeFormter`` :cite:`nie2024imputeformer`, ``Inpainter`` :cite:`yun2023imputation`,
 ``Lin-itp``, ``MaskedAE`` :cite:`he2022masked`, ``Slide window`` and ``TRMF`` :cite:`yu2016temporal`. 
@@ -65,36 +100,5 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
          python imputation/train_trmf.py --missing_ratio $i --area $area
       done
    done
-
-Prediction process
---------
-
-According to Rubin's rules :cite:p:`rubin2004multiple`, the final Chl_a prediction is obtained by averaging the outcomes of multiple imputation and prediction processes.
-
-Step.1  Generate multiple imputations for Chl_a:
-~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   # We generate 10 imputations here
-   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
-   do
-      python dataset/generate_data_with_stimp.py --area $area
-   done
-
-Step.2  Predict based on each imputation
-~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
-   do
-      for i in {0..9}  
-      do  
-         python prediction/train.py --index $i --area $area
-      done
-   done
-
-
 .. bibliography::
    :filter: {"usage"} & docnames
