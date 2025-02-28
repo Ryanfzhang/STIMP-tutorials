@@ -34,6 +34,13 @@ The generated datasets are also included in the data.zip
 
 Imputation
 ------------
+The imputation step intends to reconstruct multiple potential complete spatiotemporal Chl_a distributions from partial observations. Due to the collected remote sensing Chl_a data
+does not contain ground truth for unobserved data, we can ramdomly select part of observation as imputation target to train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`.
+
+.. code-block:: bash
+
+   python imputation/train_stimp.py --missing_ratio A --area B # :math:`A\in (0, 0.9)
+
 
 Prediction
 ------------
