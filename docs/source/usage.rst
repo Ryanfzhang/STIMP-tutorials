@@ -99,3 +99,4 @@ Reference
 --------
 
 .. bibliography::
+   :filter: {"usage"} & docnames
