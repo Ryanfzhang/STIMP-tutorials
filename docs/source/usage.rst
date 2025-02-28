@@ -44,7 +44,7 @@ does not contain ground truth for unobserved data, we can ramdomly select part o
    # B is selected representative coastal ocean area, including PRE, MEXICO, Chesapeake and Yangtze
 
 We also provide the script for training the baselines, including ``DINEOF`` :cite:`alvera2007multivariate,ma2021two`, ``CSDI`` :cite:`tashiro2021csdi`, ``ImputeFormter`` :cite:`nie2024imputeformer`, ``Inpainter`` :cite:`yun2023imputation`,
- ``Lin-itp``, ``MaskedAE`` :cite:`he2022masked`, ``Slide window`` and ``TRMF`` :cite:`yu2016temporal`. 
+``Lin-itp``, ``MaskedAE`` :cite:`he2022masked`, ``Slide window`` and ``TRMF`` :cite:`yu2016temporal`. 
 To assess the performance of STIMP, we randomly selected nine different rates of missing data, ranging from 10% to 90%, for choosing observed data as imputation targets.
 The experiments in the four coastal ocean regions, including Pearl River Estuary, Northern Gulf of Mexico, Chesapeake Bay and Yangtze River Estuary, can be conducted using the following script.
 
