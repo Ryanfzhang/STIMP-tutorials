@@ -36,6 +36,7 @@ we compared results against baseline methods in three categories: (1) machine le
 (3) spatiotemporal prediction methods, including MTGNN :cite:`wu2020connecting` and PredRNN :cite:`wang2022predrnn`.
 
 .. code-block:: bash
+
    for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
    do
       python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area PRE
@@ -50,6 +51,7 @@ we compared results against baseline methods in three categories: (1) machine le
 We also investigated if the imputation of STIMP can enhance the performance of other prediction methods in Supplementary materials. Following Rubin's rules :cite:p:`rubin2004multiple`, we trained baselines based on each imputation
 
 .. code-block:: bash
+
    for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
    do
       for i in {0..9}  
