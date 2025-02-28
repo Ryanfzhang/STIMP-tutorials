@@ -13,8 +13,6 @@ Eutrophication has produced serious red tide events or harmful algal blooms in t
    03-prediction-pearl-river-estuary
    04-prediction-pearl-river-estuary-case-study
 
-Reference
---------
 
 .. bibliography::
    :filter: {"analysis/PRE/index"} & docnames

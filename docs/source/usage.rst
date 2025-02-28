@@ -95,8 +95,6 @@ Step.2  Predict based on each imputation
       done
    done
 
-Reference
---------
 
 .. bibliography::
    :filter: {"usage"} & docnames
