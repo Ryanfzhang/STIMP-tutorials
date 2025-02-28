@@ -35,7 +35,7 @@ The generated datasets are also included in the data.zip
 Train STIMP
 --------
 
-Step1. train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`
+Step1. train the imputation function
 ~~~~~~~~~~~~~~~~~~~~~ 
 
 The imputation step intends to reconstruct multiple potential complete spatiotemporal Chl_a distributions from partial observations. Due to the collected remote sensing Chl_a data
@@ -67,7 +67,7 @@ Hence, we use the following script to generate multiple imputations for Chl_a
       python dataset/generate_data_with_stimp.py --area $area
    done
 
-Step.3  Predict based on each imputation
+Step.3  Train prediction function based on each imputation
 ~~~~~~~~~~~~
 
 .. code-block:: bash
