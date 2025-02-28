@@ -34,4 +34,4 @@ The python repository ``STIMP`` is developed and maintained by `Fan Zhang <https
 Contact
 =======
 
-Please feel free to contact `Fan Zhang<mafzhang@ust.hk>`_, `Prof. Can Yang <macyang@ust.hk>`_, or `Prof. Jianping Gan <magan@ust.hk>`_ if any inquiries.
+Please feel free to contact `Fan Zhang <mafzhang@ust.hk>`_, `Prof. Can Yang <macyang@ust.hk>`_, or `Prof. Jianping Gan <magan@ust.hk>`_ if any inquiries.
