@@ -1,14 +1,15 @@
 ================================================================
-3D *Drosophila* embryo model constructed from Stereo-seq dataset
+Yangtze River Estuary
 ================================================================
-
-The *Drosophila* embryo dataset profiled by Stereo-seq :cite:p:`wang2022high` is available at
-the Flysta3D database (https://db.cngb.org/stomics/flysta3d/).
-The *Drosophila* embryo sci-RNA-seq3 dataset :cite:p:`calderon2022continuum` is available at
-the GEO DataSets database with accession number `GSE190149 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190149>`_.
+The Yangtze River is the third longest river in the world. The river discharges into the adjacent Yangtze River Estuary near the megacities, Shanghai and Hangzhou. 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
-   Drosophila_embryo_STitch3D
-   Drosophila_embryo_MCube
+   11-imputation-yangtze-estuary.ipynb
+   12-prediction-yangtze-estuary.ipynb
+   13-prediction-yangtze-estuary-case-study.ipynb
+
+
+.. bibliography::
+   :filter: {"analysis/Yangtze/index"} & docnames
