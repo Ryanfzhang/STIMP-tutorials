@@ -27,5 +27,20 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
          python imputation/train_trmf.py --missing_ratio $i --area $area
       done
    done
+
+Prediction Metods
+----------------
+
+we compared results against baseline methods in three categories: (1) machine learning method, XGBoost :cite:`chen2016xgboost`; 
+(2) time series prediction methods, including CrossFormer :cite:`zhang2023crossformer`, TSMixer :cite:`ekambaram2023tsmixer` and  iTransFormer :cite:`liu2023itransformer`; 
+(3) spatiotemporal prediction methods, including MTGNN :cite:`wu2020connecting` and PredRNN :cite:`wang2022predrnn`.
+.. code-block:: bash
+   python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area PRE
+   python prediction/train_without_spatial_imputation.py --method "iTransformer" --area PRE
+   python prediction/train_without_spatial_imputation.py --method "TSMixer" --area PRE
+   python prediction/train_without_imputation.py --method "MTGNN" --area PRE
+   python prediction/train_as_image_without_imputation.py --method "PredRNN" --area PRE
+   python prediction/train_xgboost_without_imputation.py --area PRE
+
 .. bibliography::
    :filter: {"baselines"} & docnames
