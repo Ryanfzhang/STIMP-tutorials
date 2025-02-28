@@ -29,7 +29,7 @@ We also uploaded the datasets on Zenodo at https://doi.org/10.5281/zenodo.147247
    mv data.zip /path/to/STIMP/
    unzip e data.zip
 
-`Prepare the dataset from the raw data <https://github.com/YangLabHKUST/STIMP/blob/release/tutorials/01-preprocess_chla_data.ipynb>`_ We generate the 4 datasets, including Pearl River Estuary, the Northern of Mexico, Chesapeake Bay and Yangtze River Estuary, following this tutorials. 
+We generate the 4 datasets, including Pearl River Estuary, the Northern of Mexico, Chesapeake Bay and Yangtze River Estuary, following this tutorials. 
 The generated datasets are also included in the data.zip
 
 Train STIMP
