@@ -67,5 +67,18 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
 Prediction process
 ------------
 
+According to Rubin's rules :cite:p:`rubin2004multiple`, the final Chl_a prediction is obtained by averaging the outcomes of multiple imputation and prediction processes.
+Step.1 
+-----------------------
+Generate multiple imputation for Chl_a:
+
+.. code-block:: bash
+
+   for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
+   do
+      python dataset/generate_data_with_stimp.py --area PRE
+   done
+
+
 .. bibliography::
     :filter: {"usage"} & docnames
