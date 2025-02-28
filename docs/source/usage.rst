@@ -32,7 +32,7 @@ We also uploaded the datasets on Zenodo at https://doi.org/10.5281/zenodo.147247
 `Prepare the dataset from the raw data <https://github.com/YangLabHKUST/STIMP/blob/release/tutorials/01-preprocess_chla_data.ipynb>`_ We generate the 4 datasets, including Pearl River Estuary, the Northern of Mexico, Chesapeake Bay and Yangtze River Estuary, following this tutorials. 
 The generated datasets are also included in the data.zip
 
-Imputation
+Imputation process
 ------------
 The imputation step intends to reconstruct multiple potential complete spatiotemporal Chl_a distributions from partial observations. Due to the collected remote sensing Chl_a data
 does not contain ground truth for unobserved data, we can ramdomly select part of observation as imputation target to train the imputation function :math:`p_\theta(\mathbf{X}|\mathbf{X}^{ob})`.
@@ -64,7 +64,7 @@ The experiments in the four coastal ocean regions, including Pearl River Estuary
          python imputation/train_trmf.py --missing_ratio $i --area $area
       done
 
-Prediction
+Prediction process
 ------------
 
 .. bibliography::
