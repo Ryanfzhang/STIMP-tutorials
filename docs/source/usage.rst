@@ -27,7 +27,8 @@ We also uploaded the datasets on Zenodo at https://doi.org/10.5281/zenodo.147247
 .. code-block:: bash
 
    mv data.zip /path/to/STIMP/
-   unzip e data.zip
+   mkdir /path/to/STIMP/data
+   unzip data.zip -d /path/to/STIMP/data
 
 We generate the 4 datasets, including Pearl River Estuary, the Northern of Mexico, Chesapeake Bay and Yangtze River Estuary, following this tutorials. 
 The generated datasets are also included in the data.zip
