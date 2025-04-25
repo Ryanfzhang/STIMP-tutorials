@@ -39,12 +39,12 @@ we compared results against baseline methods in three categories: (1) machine le
 
    for area in {"PRE","MEXICO","Chesapeake","Yangtze"}
    do
-      python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area PRE
-      python prediction/train_without_spatial_imputation.py --method "iTransformer" --area PRE
-      python prediction/train_without_spatial_imputation.py --method "TSMixer" --area PRE
-      python prediction/train_without_imputation.py --method "MTGNN" --area PRE
-      python prediction/train_as_image_without_imputation.py --method "PredRNN" --area PRE
-      python prediction/train_xgboost_without_imputation.py --area PRE
+      python prediction/train_without_spatial_imputation.py --method "CrossFormer" --area area
+      python prediction/train_without_spatial_imputation.py --method "iTransformer" --area area
+      python prediction/train_without_spatial_imputation.py --method "TSMixer" --area area
+      python prediction/train_without_imputation.py --method "MTGNN" --area area
+      python prediction/train_as_image_without_imputation.py --method "PredRNN" --area area
+      python prediction/train_xgboost_without_imputation.py --area area
    done
 
 
