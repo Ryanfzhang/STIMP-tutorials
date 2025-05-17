@@ -8,3 +8,5 @@ Code for reproducing the results presented in our paper
    :maxdepth: 2
    
    prediction_length/index.rst
+   imputation_length/index.rst
+   recurrent_prediction/index.rst

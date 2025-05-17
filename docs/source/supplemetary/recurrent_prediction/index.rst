@@ -6,10 +6,7 @@ The Yangtze River is the third longest river in the world. The river discharges 
 .. toctree::
    :maxdepth: 2
    
-   11-imputation-yangtze-estuary.ipynb
-   12-prediction-yangtze-estuary.ipynb
-   13-prediction-yangtze-estuary-case-study.ipynb
 
 
 .. bibliography::
-   :filter: {"supplementary/prediction_length/index"} & docnames
+   :filter: {"supplementary/recurrent_prediction/index"} & docnames

@@ -19,6 +19,7 @@ Contents
    usage.rst
    baselines.rst
    analysis/index.rst
+   supplementary/index.rst
 
 Reference
 --------
