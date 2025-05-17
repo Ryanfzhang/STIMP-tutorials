@@ -5,7 +5,7 @@ Recurrent Prediction
 
 .. toctree::
    :maxdepth: 2
-   
+   supple-prediction-recurrently-mean.ipynb
 
 
 .. bibliography::
