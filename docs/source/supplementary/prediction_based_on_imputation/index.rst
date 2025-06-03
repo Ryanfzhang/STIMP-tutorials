@@ -1,5 +1,5 @@
 ================================================================
-Predicted Chl_a of STIMP and baselines trained on imputed dataset at three locations
+Case study: predicted Chl_a of STIMP and baselines trained on imputed dataset
 ================================================================
 
 
@@ -7,6 +7,7 @@ Predicted Chl_a of STIMP and baselines trained on imputed dataset at three locat
    :maxdepth: 2
    
    supple-prediction-pearl-river-estuary-case-study.ipynb
+   prediction.ipynb
 
 .. bibliography::
    :filter: {"supplementary/prediction_based_on_imputation/index"} & docnames
