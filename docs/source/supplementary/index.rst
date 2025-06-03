@@ -14,4 +14,5 @@ Code for reproducing the main results presented in the supplementary
    prediction_based_on_imputation/index.rst
    MaskedAE_and_Lin-itp/index.rst
    dineof/index.rst
+   climate_mean/index.rst
 
