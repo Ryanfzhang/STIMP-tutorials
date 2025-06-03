@@ -13,4 +13,5 @@ Code for reproducing the main results presented in the supplementary
    recurrent_prediction/index.rst
    prediction_based_on_imputation/index.rst
    MaskedAE_and_Lin-itp/index.rst
+   dineof/index.rst
 
